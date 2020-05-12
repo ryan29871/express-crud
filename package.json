@@ -5,7 +5,9 @@
   "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=development node server.js",
-    "test": "jest --watchAll --setupFiles dotenv/config"
+    "test": "jest --setupFiles dotenv/config --testTimeout=10000",
+    "test:watch": "jest --setupFiles dotenv/config --watchAll",
+    "test:cov": "jest --setupFiles dotenv/config --coverage"
   },
   "author": "Ryan Skotnicki",
   "license": "ISC",

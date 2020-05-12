@@ -3,6 +3,7 @@ const app = require('../../app');
 const newGoal = require('../mock-data/new-goal.json');
 
 const endpointUrl = '/goals/';
+const rootEndpointUrl = '/';
 const nonExistingGoalId = '5eb9f1abce0bb571a89b81f8';
 const testData = {
   title: 'Make integration test for PUT',
@@ -13,6 +14,13 @@ const testData = {
 let firstGoal, newGoalId;
 
 describe(endpointUrl, () => {
+
+  it('GET ' + endpointUrl, async () => {
+    const response = await request(app).get(rootEndpointUrl);
+    expect(response.statusCode).toBe(200);
+    expect(Array.isArray(response.body)).toBeTruthy();
+  });
+
   it('GET ' + endpointUrl, async () => {
     const response = await request(app).get(endpointUrl);
     expect(response.statusCode).toBe(200);
