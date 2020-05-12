@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Get a Job",
+    "description": "Apply for a job",
+    "complete": false
+  },
+  {
+    "title": "Get a certification",
+    "description": "Start studying and pass exam",
+    "complete": true
+  }
+]
