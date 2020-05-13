@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const rootRoutes = require('./routes/goal.routes')
+const rootRoutes = require('./routes/root.routes')
 const goalRoutes = require('./routes/goal.routes')
 const mongodb = require('./mongodb/mongodb.connect')
 
